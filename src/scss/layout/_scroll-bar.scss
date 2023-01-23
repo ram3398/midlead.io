@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+/*==== SCROLL BAR ========================*/
+::-webkit-scrollbar {
+  width: 0.65rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: var(--primary-color-hover);
+  }
+}
+
+@supports (scrollbar-color: grey lightgrey) {
+  * {
+    scrollbar-color: var(--primary-color) var(--scrollbar-bg-color);
+    scrollbar-width: 0.65rem;
+  }
+}

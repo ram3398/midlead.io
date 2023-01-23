@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+%button {
+  padding: 0.75rem 1.5625rem;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font: var(--medium-font) var(--normal-font-size) var(--lexend-font-family);
+  @include button-shadow;
+  @include border-radius('5');
+  cursor: pointer;
+  transition: background-color 280ms ease-in-out, box-shadow 280ms ease-in;
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color-hover);
+    box-shadow: 0 0 0 0 rgb(43 167 237 / 30%);
+  }
+}
+
+.button {
+  @extend %button;
+}
